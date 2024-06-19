@@ -25,7 +25,7 @@ This repository contains AutoHotkey scripts to manipulate window size and positi
 
 #### 2. Script to Change Window Width
 
-- **Purpose**: This script adjusts the width of the specified window without changing its height or position.
+- **Purpose**: This script adjusts the width of the specified window without changing its height or position. Be cautious with extreme width changes as it may affect what is visible on screen.
 
 ##### Usage:
 
@@ -60,6 +60,7 @@ This repository contains AutoHotkey scripts to manipulate window size and positi
 ### Notes
 
 - Ensure that the `WinTitle` variable in each script matches exactly with the title of the application window as it appears in the Windows title bar.
+- When adjusting window width, be mindful that extreme changes may affect what is visible on screen. Experiment with different widths to find what works best for you.
 - These scripts use AutoHotkey's `WinMove` command to manipulate window size and position based on screen coordinates. Adjustments may be needed based on specific application behaviors.
 
 ### License
