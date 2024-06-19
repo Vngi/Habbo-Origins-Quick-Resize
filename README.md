@@ -49,9 +49,10 @@ This repository contains AutoHotkey scripts to manipulate window size and positi
 1. **Install AutoHotkey**: If not already installed, download and install AutoHotkey from [https://www.autohotkey.com/](https://www.autohotkey.com/).
 
 2. **Edit the Script**:
-   - Open the script file (`CenterWindow.ahk`) in a text editor.
+   - Open the script file (`FixWindow.ahk`) in a text editor.
    - Modify the `WinTitle` variable to match the title of the application window you want to center.
    - Adjust the `ScreenWidthFraction` and `ScreenHeightFraction` variables if you want to center the window differently.
+   - Giving you the ability to move it around without issues!
 
 3. **Run the Script**:
    - Double-click the `CenterWindow.ahk` file to execute the script.
