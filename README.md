@@ -1,15 +1,19 @@
-#####Mac Guide: 
+# Window Management Scripts
 
-# Hammerspoon Window Management
+This repository contains scripts for managing window size and position on macOS and Windows.
+
+## macOS Guide
+
+### Hammerspoon Window Management
 
 This guide explains how to use Hammerspoon, a powerful automation tool for macOS, to automatically center a window with a specific title.
 
-## Prerequisites
+### Prerequisites
 
 - macOS
 - [Hammerspoon](https://www.hammerspoon.org/) installed
 
-## Installation
+### Installation
 
 1. **Download and Install Hammerspoon**:
    - Visit [Hammerspoon.org](https://www.hammerspoon.org/) and download the latest version.
@@ -62,25 +66,28 @@ This guide explains how to use Hammerspoon, a powerful automation tool for macOS
    - Launch Hammerspoon from the Applications folder.
    - Click on the Hammerspoon menu bar icon and select "Reload Config".
 
-## Usage
+### Usage
 
 - The script will automatically center the window titled "Habbo Hotel: Origins" when it is created, moving it 100 pixels down from the center of the screen.
 
-## Contributing
+### Contributing
 
 Feel free to submit issues or pull requests if you have suggestions for improvements.
 
-## License
+### License
 
 This project is licensed under the MIT License.
 
-
+## Windows Guide
 
 ### AutoHotkey Scripts for Window Manipulation
 
-#### Scripts Overview
+This guide explains how to use AutoHotkey scripts to manipulate window size and position for specific applications on Windows.
 
-This repository contains AutoHotkey scripts to manipulate window size and position for specific applications on Windows.
+### Prerequisites
+
+- Windows
+- [AutoHotkey](https://www.autohotkey.com/) installed
 
 ### Instructions for Each Script
 
@@ -127,10 +134,8 @@ This repository contains AutoHotkey scripts to manipulate window size and positi
 1. **Install AutoHotkey**: If not already installed, download and install AutoHotkey from [https://www.autohotkey.com/](https://www.autohotkey.com/).
 
 2. **Edit the Script**:
-   - Open the script file (`FixWindow.ahk`) in a text editor.
+   - Open the script file (`CenterWindow.ahk`) in a text editor.
    - Modify the `WinTitle` variable to match the title of the application window you want to center.
-   - Adjust the `ScreenWidthFraction` and `ScreenHeightFraction` variables if you want to center the window differently.
-   - Giving you the ability to move it around without issues!
 
 3. **Run the Script**:
    - Double-click the `CenterWindow.ahk` file to execute the script.
@@ -152,4 +157,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ### Acknowledgments
 
-- Thank you to AutoHotkey community for their scripting resources.
+- Thank you to the AutoHotkey community for their scripting resources.
