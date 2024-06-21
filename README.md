@@ -1,8 +1,8 @@
 # Window Management Scripts
 
 ![In Game Overview](images/overview.png)
-![Login Overview](images/overview.png)
-![Hotel View Overview](images/overview.png)
+![Login Overview](images/login.png)
+![Hotel View Overview](images/hotelview.png)
 
 Welcome to the Window Management Scripts repository. This repository contains scripts and guides for managing window size and position on both macOS and Windows platforms. Whether you're looking to automate window management or enhance your gaming experience, these scripts provide solutions tailored to your needs.
 
