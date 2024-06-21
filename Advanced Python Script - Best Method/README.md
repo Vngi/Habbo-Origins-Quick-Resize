@@ -1,75 +1,57 @@
-### macOS Guide
+### Window Management Python Script
 
-#### Hammerspoon Window Management
+This repository contains a Python script (`resize_habbo.py`) for managing window size and position on Windows using the `pywin32` library.
 
-This repository includes a script for managing window size and position on macOS using Hammerspoon.
+### Usage Instructions
 
-### Prerequisites
+1. **Downloading the Repository**:
+   - Click on the green "Code" button above and select "Download ZIP" to download the repository files to your computer.
+   - Extract the downloaded ZIP file to a location accessible to you.
 
-- macOS
-- [Hammerspoon](https://www.hammerspoon.org/) installed
+2. **Setup**:
+   - Place the `resize_habbo.py` script in a location accessible to you.
 
-### Installation
+3. **Execution**:
+   - Ensure "Habbo Hotel: Origins" is running and you are on the login screen.
+   - Double-click `Run.bat` to automatically resize the window and enter fullscreen mode.
+   - If prompted, allow the batch script to install Python and necessary modules.
 
-1. **Download and Install Hammerspoon**:
-   - Visit [Hammerspoon.org](https://www.hammerspoon.org/) and download the latest version.
-   - Install Hammerspoon by dragging it to your Applications folder.
+4. **Script Behavior**:
+   - The script will automatically resize the window to cover the entire screen and center it horizontally.
+   - It simulates entering fullscreen mode for an enhanced viewing experience.
 
-2. **Create Configuration File**:
-   - Open Terminal.
-   - Create the `.hammerspoon` directory in your home folder if it doesn't exist:
-     ```sh
-     mkdir -p ~/.hammerspoon
-     ```
-   - Open your favorite text editor and create a file named `init.lua` in the `.hammerspoon` directory:
-     ```sh
-     touch ~/.hammerspoon/init.lua
-     ```
+### Notes
 
-3. **Add the Script**:
-   - Copy and paste the following Lua script into `init.lua`:
-     ```lua
-     -- Adjust the title below to match the window title of "Habbo Hotel: Origins"
-     local winTitle = "Habbo Hotel: Origins"
+- **Client Issues**: Some aspects of "Origins" may not function correctly due to issues with the client.
+- **Image Disclaimer**: The images displayed in this README are from an older version where these issues were not present.
 
-     -- Function to center the window
-     local function centerWindow()
-         local win = hs.window.find(winTitle)
-         if win then
-             local screen = win:screen()
-             local screenFrame = screen:frame()
-             local winFrame = win:frame()
+### Run.bat
 
-             local newX = (screenFrame.w - winFrame.w) / 2
-             local newY = (screenFrame.h - winFrame.h) / 2 + 100 -- Move down by 100 pixels to center lower
+This repository includes a batch script (`Run.bat`) for automating the setup and execution of the Python script to manage window size and fullscreen mode on Windows.
 
-             win:setFrame(hs.geometry.rect(newX, newY, winFrame.w, winFrame.h))
-         end
-     end
+### Usage Instructions
 
-     -- Watch for the window to appear and then center it
-     hs.window.filter.new(winTitle)
-         :subscribe(hs.window.filter.windowCreated, function()
-             hs.timer.doAfter(1, centerWindow)
-         end)
+1. **Automatic Installation**:
+   - Double-click the `Run.bat` file to run it.
+   - If Python and necessary modules are not installed, the script will automatically download and install them.
 
-     -- Reload Hammerspoon configuration automatically
-     hs.pathwatcher.new(os.getenv("HOME") .. "/.hammerspoon/", hs.reload):start()
-     hs.alert.show("Config loaded")
-     ```
+2. **Manual Installation**:
+   - If the automatic installation does not work, you can manually install:
+     - [Python](https://www.python.org/downloads/) (version 3.x)
+     - Open the `Run.bat` file with a text editor and follow the instructions within to install Python and modules manually.
 
-4. **Reload Hammerspoon Configuration**:
-   - Launch Hammerspoon from the Applications folder.
-   - Click on the Hammerspoon menu bar icon and select "Reload Config".
+3. **Running the Script**:
+   - After installation, double-click `Run.bat` to automatically manage the window size and fullscreen mode of "Habbo Hotel: Origins".
 
-### Usage
+### Notes
 
-- The script will automatically center the window titled "Habbo Hotel: Origins" when it is created, moving it 100 pixels down from the center of the screen.
+- Adjust Python version (`PYTHON_VERSION`) and module dependencies as needed in the script (`Run.bat`).
+- Ensure an active internet connection during installation for downloading Python and modules.
 
 ### Contributing
 
-Feel free to submit issues or pull requests if you have suggestions for improvements.
+Contributions are welcome! If you have suggestions or improvements for the installation script, please feel free to open an issue or submit a pull request.
 
 ### License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
